@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: MyString
+  target_date: 2019-07-16 12:13:04
+
+two:
+  content: MyString
+  target_date: 2019-07-16 12:13:04

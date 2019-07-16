@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2019-07-16 12:14:06
+  duration: 1.5
+  comment: MyString
+  manual: false
+
+two:
+  date: 2019-07-16 12:14:06
+  duration: 1.5
+  comment: MyString
+  manual: false

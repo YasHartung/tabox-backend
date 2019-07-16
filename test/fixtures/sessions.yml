@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tabs: MyString
+  date: 2019-07-16 12:16:19
+  comment: MyString
+
+two:
+  tabs: MyString
+  date: 2019-07-16 12:16:19
+  comment: MyString
