@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   get '/users', to: 'users#index'
   get '/users/:id/clients', to:'users#user_clients' 
+  post '/login', to: 'users#login'
   
 end
