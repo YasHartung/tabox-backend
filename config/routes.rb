@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   post '/login', to: 'users#login'
   post '/clients', to: 'clients#create'
   
+  post '/taskboards', to: 'taskboards#create'
+  delete '/taskboards/:id', to: 'taskboards#destroy'
+
+  post '/tasks', to: 'tasks#create'
 end
