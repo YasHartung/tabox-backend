@@ -4,7 +4,7 @@ class TaskboardsController < ApplicationController
         
         @taskboard = Taskboard.create!(name: params[:name], user_id: params[:user_id], client_id: params[:client_id])
         @user = @taskboard.user
-
+        
         render :json => @user
     end
 

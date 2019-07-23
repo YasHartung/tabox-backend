@@ -9,6 +9,24 @@ class TasksController < ApplicationController
         render :json => @user
     end
 
+    def destroy
+       
+        @task = Task.find(params[:id])
+        @user = @task.user
+        
+         Task.delete(params[:id])
+        
+         render :json => @user
+    end
+
+    def add_to_other_taskboard
+      
+        @taskboard = Taskboard.find(params[:taskboard_id])
+        @ttb = TaskTaskBoard.create!(task_id: params[:task_id], taskboard_id: params[:taskboard_id])
+        
+        render :json => @taskboard.user
+    end
+
 
     private
     
