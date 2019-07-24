@@ -1,7 +1,11 @@
 class ClientSerializer < ActiveModel::Serializer
-  attributes :id, :name, :email, :phone, :user_id, :sessions, :logs, :taskboards
+  attributes :id, :name, :email, :phone, :user_id, :sessions
 
-  class TaskboardSerializer < ActiveModel::Serializer
-    attributes :id, :name, :client_id, :user_id, :tasks
+  has_many :sessions
+  
+  class SessionSerializer < ActiveModel::Serializer
+    attributes :id, :tabs, :client_id, :created_at
+  
+    
   end
 end

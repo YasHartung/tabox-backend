@@ -17,5 +17,5 @@ Rails.application.routes.draw do
 
   post '/logs', to: 'logs#create'
 
-  post '/sessions' to: 'sessions#create'
+  post '/sessions', to: 'sessions#create'
 end
