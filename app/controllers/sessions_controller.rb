@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
 
-    def index
-
+    def create
+        byebug
     end
 end
