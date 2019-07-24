@@ -14,4 +14,8 @@ Rails.application.routes.draw do
   post '/tasks', to: 'tasks#create'
   delete '/tasks/:id', to: 'tasks#destroy'
   post '/tasks/:id', to: 'tasks#add_to_other_taskboard'
+
+  post '/logs', to: 'logs#create'
+
+  post '/sessions' to: 'sessions#create'
 end
