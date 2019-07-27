@@ -1,26 +1,26 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :username, :clients, :logs, :taskboards
+  attributes :id, :username, :projects, :taskboards
 
   has_many :taskboards
-  has_many :clients
+  has_many :projects
   
   class TaskboardSerializer < ActiveModel::Serializer
-    attributes :id, :name, :client_id, :user_id, :tasks
+    attributes :id, :name, :project_id, :user_id, :tasks
   end
 
-    def clients
-      customized_clients = []
+    def projects
+      customized_projects = []
 
-      object.clients.each do |client|
+      object.projects.each do |project|
 
-        custom_client = client.attributes
+        custom_project = project.attributes
 
-        custom_client[:sessions] = client.sessions
+        custom_project[:sessions] = project.sessions
 
 
-        customized_clients.push(custom_client)
+        customized_projects.push(custom_project)
       end
-      return customized_clients
+      return customized_projects
     end
 
   

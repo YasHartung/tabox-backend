@@ -2,7 +2,7 @@ class TaskboardsController < ApplicationController
 
     def create
         
-        @taskboard = Taskboard.create!(name: params[:name], user_id: params[:user_id], client_id: params[:client_id])
+        @taskboard = Taskboard.create!(name: params[:name], user_id: params[:user_id], project_id: params[:project_id])
         @user = @taskboard.user
         
         render :json => @user

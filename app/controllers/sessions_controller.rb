@@ -1,9 +1,17 @@
 class SessionsController < ApplicationController
 
     def create
-        @session= Session.create!(tabs: params[:tabs], client_id: params[:client_id])
+
+        @session= Session.create!(session_params)
      
 
-        render :json => @session.client.user
+        render :json => @session.project.user
+    end
+
+
+    private 
+    
+    def session_params
+        params.require(:session).permit(:tabs, :project_id, :comment)
     end
 end

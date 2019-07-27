@@ -1,5 +1,5 @@
 class SessionSerializer < ActiveModel::Serializer
-  attributes :id, :tabs, :client_id, :created_at
+  attributes :id, :tabs, :comment, :project_id, :created_at
 
  
 end

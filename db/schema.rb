@@ -10,26 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_24_170414) do
+ActiveRecord::Schema.define(version: 2019_07_27_195229) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "clients", force: :cascade do |t|
+  create_table "projects", force: :cascade do |t|
     t.string "name"
-    t.string "email"
-    t.string "phone"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "logs", force: :cascade do |t|
-    t.datetime "date"
-    t.float "duration"
-    t.string "comment"
-    t.boolean "manual"
-    t.integer "client_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -37,9 +24,10 @@ ActiveRecord::Schema.define(version: 2019_07_24_170414) do
 
   create_table "sessions", force: :cascade do |t|
     t.string "tabs"
-    t.integer "client_id"
+    t.integer "project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "comment"
   end
 
   create_table "task_task_boards", force: :cascade do |t|
@@ -51,7 +39,7 @@ ActiveRecord::Schema.define(version: 2019_07_24_170414) do
 
   create_table "taskboards", force: :cascade do |t|
     t.string "name"
-    t.integer "client_id"
+    t.integer "project_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -59,8 +47,7 @@ ActiveRecord::Schema.define(version: 2019_07_24_170414) do
 
   create_table "tasks", force: :cascade do |t|
     t.string "content"
-    t.datetime "target_date"
-    t.integer "client_id"
+    t.integer "project_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
