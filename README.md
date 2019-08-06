@@ -1,24 +1,7 @@
-# README
+Tabox Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A web app designed to help you save chrome sessions related to different projects.
 
-Things you may want to cover:
+Whether you're planning a trip with a 20 hotel tabs or working on a new feature of a project with 100s of stackoverflow tabs, Tabox can help you keep track of all these sessions so that returning to your project is seemless.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Tabox Frontend: https://github.com/YasHartung/tabox
