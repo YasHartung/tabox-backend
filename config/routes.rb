@@ -16,6 +16,6 @@ Rails.application.routes.draw do
   post '/tasks/:id', to: 'tasks#add_to_other_taskboard'
 
 
-
+  delete '/sessions/:id', to: 'sessions#destroy'
   post '/sessions', to: 'sessions#create'
 end
