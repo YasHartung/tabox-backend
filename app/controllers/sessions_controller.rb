@@ -7,6 +7,17 @@ class SessionsController < ApplicationController
 
         render :json => @session.project.user
     end
+    
+
+    def destroy
+        
+        @session = Session.find(params[:id])
+        @user = @session.project.user 
+        Session.delete(@session.id)
+        
+        
+         render :json => @user
+    end
 
 
     private 
